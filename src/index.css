@@ -1,0 +1,54 @@
+@import url('https://abswerit.github.io/fontsbd/public/arabic/fonts.css');
+@import url('https://abswerit.github.io/fontsbd/public/kohinoor/fonts.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Kohinoor Bangla", "Inter", "Noto Sans Bengali", "Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Kohinoor Bangla", "Arabic", serif;
+  --font-arabic: "Arabic", "Amiri", serif;
+  
+  --color-primary: #1a4d2e;
+  --color-secondary: #4f6f52;
+  --color-accent: #e8dfca;
+  --color-paper: #f5f2ed;
+}
+
+body {
+  @apply bg-paper text-gray-900;
+  font-family: "Kohinoor Bangla", "Inter", "Noto Sans Bengali", ui-sans-serif, system-ui, sans-serif;
+}
+
+.arabic-text {
+  font-family: "Arabic", "Amiri", serif;
+  @apply text-right;
+  direction: rtl;
+}
+
+.book-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.page-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-accent rounded-full;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-secondary;
+}
